@@ -111,3 +111,15 @@ test('a null value given to likes', async () => {
   expect(newBlogLikes).toBe(0)
 
   })
+
+  test('check that post doesnt happen without title or url', async () => {
+    const newBlog = {
+      title: 'Testi Blogi',
+      author: 'Onni'
+    }
+  
+    await api.post('/api/blogs')
+    .send(newBlog).expect(400)
+  
+  
+    })
