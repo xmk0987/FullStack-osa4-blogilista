@@ -33,22 +33,35 @@ beforeEach(async () => {
     await blogObject.save()
     })
 
+
 test('blogs are returned as json', async () => {
     await api
       .get('/api/blogs')
       .expect(200)
       .expect('Content-Type', /application\/json/)
   })
-  
-  
 
 
-  test('there are six blogs', async () => {
+test('there are six blogs', async () => {
     const response = await api.get('/api/blogs')
-  
-    expect(response.body).toHaveLength(initialBlogs.length)
-  })
 
-  afterAll(async () => {
+    expect(response.body).toHaveLength(initialBlogs.length)
+})
+
+afterAll(async () => {
     await mongoose.connection.close()
-  })
+})
+
+
+test('identification is id', async () => {
+    const response = await api.get('/api/blogs')
+
+    console.log(response.body[0])
+
+    console.log(response.body.length)
+    for(var i = 0; i < response.body.length; i++ ){
+        console.log(response.body[i].id)
+        expect(response.body[i].id).toBeDefined()
+    }
+    
+})
