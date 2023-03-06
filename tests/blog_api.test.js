@@ -87,3 +87,27 @@ test('blogs are posted', async () => {
 
  
 })
+
+
+test('a null value given to likes', async () => {
+  const newBlog = {
+    title: 'Testi Blogi',
+    author: 'Onni',
+    url: 'https://testi.com/'
+  }
+
+  await api.post('/api/blogs')
+  .send(newBlog).expect(201).expect('Content-Type', /application\/json/)
+
+
+  const response = await api.get('/api/blogs')
+  console.log(response.body)
+  
+  const newBlogLikes = response.body.find(x => x.title === 'Testi Blogi').likes
+
+  console.log(newBlogLikes)
+
+
+  expect(newBlogLikes).toBe(0)
+
+  })

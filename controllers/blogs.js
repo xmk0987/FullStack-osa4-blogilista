@@ -8,7 +8,10 @@ blogsRouter.get('/', async (request, response) => {
 })
 
 blogsRouter.post('/', (request, response) => {
+  console.log('testi tuleeko tähä')
   const blog = new Blog(request.body)
+
+
 
   blog
     .save()
