@@ -3,9 +3,10 @@ Content-Type: application/json
 
 {
 
-  "title": "Testingtesting",
+  "title": "testingtinesn",
   "author": "Robert C. Martin",
-  "url": "http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html"
+  "url": "http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html",
+  "likes": 2232
    
   
 }
