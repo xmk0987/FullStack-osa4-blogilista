@@ -38,12 +38,51 @@ const mostBlogs = (blogs) => {
     }
 
     return wantedStruct
+}
 
+
+const mostLikes = (blogs) => {
+    let totalLikesBlogs = blogs;
+
+    totalLikesBlogs = totalLikesBlogs.reduce((obj, value) => {  
+    let find = obj.find(element => element.author === value.author);  
+    let _d = {  
+        ...value
+    }
+    find ? (find.likes += value.likes ) : obj.push(_d);
+    return obj;
+    }, [])
+
+    const mostTotalLikes = totalLikesBlogs.map(blog => blog.likes).reduce((a, b) => Math.max(a, b), -Infinity);
+    console.log(totalLikesBlogs)
+
+    let wantedAuthorName = ""
+
+    totalLikesBlogs.forEach(element => {
+        if(element.likes === mostTotalLikes){
+            console.log(element.author)
+            wantedAuthorName = element.author
+        }
+    })
+
+    console.log(wantedAuthorName)
+
+    const wantedStruct = {
+        author: wantedAuthorName,
+        likes: mostTotalLikes
+    }
+
+    console.log(wantedStruct)
+
+
+    return wantedStruct
+   
 }
 
 module.exports = {
   dummy,
   totalLikes,
   favoriteBlog,
-  mostBlogs
+  mostBlogs,
+  mostLikes
 }
