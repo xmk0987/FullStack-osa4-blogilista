@@ -65,3 +65,25 @@ test('identification is id', async () => {
     }
     
 })
+
+
+test('blogs are posted', async () => {
+    console.log(initialBlogs.length)
+    const newBlog = {
+      title: 'Testi Blogi',
+      author: 'Onni',
+      url: 'https://testi.com/',
+      likes: 90
+    }
+
+    await api.post('/api/blogs')
+    .send(newBlog).expect(201).expect('Content-Type', /application\/json/)
+
+    const response = await api.get('/api/blogs')
+
+    
+    expect(response.body).toHaveLength(initialBlogs.length + 1)
+    console.log(response.body.length)
+
+ 
+})
