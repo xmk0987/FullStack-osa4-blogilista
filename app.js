@@ -5,8 +5,6 @@ const app = express()
 const cors = require('cors')
 
 
-
-
 const blogsRouter = require('./controllers/blogs')
 const middleware = require('./utils/middleware')
 const logger = require('./utils/logger')
