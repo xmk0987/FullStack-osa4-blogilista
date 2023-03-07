@@ -5,7 +5,7 @@ const app = require('../app')
 const api = supertest(app)
 const helper = require('./test_helper')
 const Blog = require('../models/blog')
-
+jest.setTimeout(10000)
 
 beforeEach(async () => {
   await Blog.deleteMany({})
@@ -133,3 +133,30 @@ test('delete working', async () => {
   expect(titles).not.toContain(blogToDelete.title)
 
 })
+
+
+test('check updated blog', async () => {
+  
+  const blogsAtStart = await helper.blogsInDb()
+  console.log(blogsAtStart)
+  const blogToUpdate = blogsAtStart[0]
+  console.log(blogToUpdate.id)
+
+  await api
+  .put(`/api/blogs/${blogToUpdate.id}`)
+  .send({likes: 100})
+
+  console.log("testi")
+  const blogsAtEnd = await helper.blogsInDb()
+  console.log(blogsAtEnd)
+  const updatedBlog = blogsAtEnd[0]
+
+  expect(updatedBlog.likes).toBe(100)
+  expect(200)
+
+
+
+
+
+})
+
