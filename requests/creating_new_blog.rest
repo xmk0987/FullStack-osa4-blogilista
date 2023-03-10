@@ -1,6 +1,6 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2NDBiMTI5NWIxMGQzYWZmZWZhYWE0ZWUiLCJpYXQiOjE2Nzg0NTUxMzd9.KOACufc4AYygnf5xKRdynlz3E-skp3T-nmZzplBSprc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2NDBiMTI5NWIxMGQzYWZmZWZhYWE0ZWUiLCJpYXQiOjE2Nzg0NTczNDJ9.vlvKrGWPbjyVKtfum1EKuqNHCmV-FMZc_crQSY8K2KM
 
 {
   "title": "testingtinesn3232",
