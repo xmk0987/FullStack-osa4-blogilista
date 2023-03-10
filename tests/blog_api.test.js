@@ -60,7 +60,7 @@ test('blogs are posted', async () => {
       author: 'Onni',
       url: 'https://testi.com/',
       likes: 90,
-      userId: '640b1295b10d3affefaaa4ee'
+      userId: '640b4653905dc3d185a9cb89'
     }
 
     await api.post('/api/blogs')

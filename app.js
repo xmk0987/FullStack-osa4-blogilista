@@ -8,7 +8,6 @@ const mongoose = require('mongoose')
 require('express-async-errors')
 const middleware = require('./utils/middleware')
 app.use(middleware.tokenExtractor)
-
 const usersRouter = require('./controllers/users')
 const blogsRouter = require('./controllers/blogs')
 

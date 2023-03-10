@@ -1,11 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2NDBiMTI5NWIxMGQzYWZmZWZhYWE0ZWUiLCJpYXQiOjE2Nzg0NTczNDJ9.vlvKrGWPbjyVKtfum1EKuqNHCmV-FMZc_crQSY8K2KM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hdHRpIiwiaWQiOiI2NDBiNDY1MzkwNWRjM2QxODVhOWNiODkiLCJpYXQiOjE2Nzg0NjE0NTd9.1OtBtnYoGgwbp85PeHOvsqmoZqz5LoeixxLLVVkwM0w
 
 {
   "title": "testingtinesn3232",
   "author": "Robert C. Martin",
   "url": "http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html",
-  "likes": 2232,
-  "userId": "640b1295b10d3affefaaa4ee"
+  "likes": 2232
 }
