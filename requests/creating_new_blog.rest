@@ -6,7 +6,8 @@ Content-Type: application/json
   "title": "testingtinesn",
   "author": "Robert C. Martin",
   "url": "http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html",
-  "likes": 2232
+  "likes": 2232,
+  "userId": "640b1295b10d3affefaaa4ee"
    
   
 }
